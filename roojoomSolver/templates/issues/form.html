@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <form action="{% url 'roojoomSolver:index'  %}" method="post">
+            {% csrf_token %}
+            <ul>
+                User ID: {{ form.user_id }}
+            </ul>
+            <ul>
+                Issue Description: {{ form.issue_description }}
+            </ul>
+            <ul>
+                Serial: {{ form.serial }}
+            </ul>
+            <ul>
+                Lights: {{ form.light_status1 }} {{ form.light_status2 }}
+                {{form.light_status3 }}
+            </ul>
+            <input type="submit" value="Submit" />
+        </form>
+    </body>
+</html>
